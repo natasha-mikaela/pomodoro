@@ -1,0 +1,15 @@
+
+    <div>
+      <h1 class="ion-text-center timer">
+        {{time}}
+      </h1>
+      <ion-grid>
+          <ion-row text-center>
+            <ion-col>
+              <ion-button color="success" expand="block" *ngIf="(!running && time == blankTime) || (!running && time != blankTime)" (click)="start()">{{ 'start' }}</ion-button>
+              <ion-button color="danger" expand="block" *ngIf="running" (click)="stop()">{{ 'stop' }}</ion-button>
+              <ion-button color="warning" expand="block" *ngIf="time != blankTime" (click)="reset()">{{ 'reset' }}</ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </div>
